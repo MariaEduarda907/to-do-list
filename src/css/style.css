@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #c7a2a1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.container {
+    background-color: #ffffff;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+h1 img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background-color: #f0f0f0;
+}
+
+#input-box {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+#add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #996e90;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #b89594;
+    }
+}
+
+#list-container li{
+    list-style: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#list-container li::before{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #fae0f2;
+    border-radius: 50%;
+    background-image: url("../../assets/icons8-círculo-50.png");
+    background-size: cover;
+    background-position: center;
+    left: 12px;
+    top: 8px;
+}
+
+#list-container li.checked{
+    color: #555555;
+    text-decoration: line-through;
+}
+
+#list-container li.checked::before{
+    background-image: url("../../assets/icons8-checkmark-50.png");
+}
+
+#list-container li span{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #333333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#list-container li span:hover{
+    color: #cc0000;
+    background-color: #f0f0f0;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666666;
+    background-color: #b89594;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 50px 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #input-box {
+        font-size: 0.9rem;
+    }
+
+    #add-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    #list-container li {
+        font-size: 0.9rem;
+        padding: 10px 6px 10px 40px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
+}
